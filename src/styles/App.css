@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+}
+
+.home {
+  padding: 2rem;
+}
+
+.game-interface {
+  margin: 2rem;
+}
+
+.leaderboard {
+  margin: 2rem;
+}
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif; /* Gaming font */
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d); /* Dark gradient background */
+  color: #fff;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: #00ffcc; /* Neon cyan for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff00cc; /* Neon pink for hover */
+}
+
+button {
+  background-color: #00ffcc; /* Neon cyan for buttons */
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff00cc; /* Neon pink for hover */
+}

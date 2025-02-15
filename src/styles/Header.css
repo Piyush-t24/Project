@@ -1,0 +1,36 @@
+/* Header.css */
+.header {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon glow */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #00ffcc; /* Neon cyan */
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Glowing effect */
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav ul li a {
+  font-size: 1.2rem;
+  color: #00ffcc; /* Neon cyan */
+  text-shadow: 0 0 5px #00ffcc;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #ff00cc; /* Neon pink */
+  text-shadow: 0 0 10px #ff00cc;
+}

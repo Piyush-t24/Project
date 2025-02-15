@@ -1,0 +1,43 @@
+/* GameInterface.css */
+.game-interface {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.game-interface h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00ffcc; /* Neon cyan */
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.game-interface h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.options button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ffcc; /* Neon cyan */
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+  background-color: #ff00cc; /* Neon pink */
+}

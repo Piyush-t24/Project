@@ -1,0 +1,59 @@
+/* GameLobby.css */
+.game-lobby {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.game-lobby h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00ffcc; /* Neon cyan */
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.group-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.group-card {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon glow */
+  text-align: center;
+}
+
+.group-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00ffcc; /* Neon cyan */
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.group-card p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.group-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ffcc; /* Neon cyan */
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.group-card button:hover {
+  background-color: #ff00cc; /* Neon pink */
+}
