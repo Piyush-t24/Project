@@ -1,26 +1,40 @@
+/* Leaderboard.css */
 .leaderboard {
+  background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  color: #fff;
   text-align: center;
+}
+
+.leaderboard h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
 }
 
 .leaderboard table {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
   border-collapse: collapse;
 }
 
 .leaderboard th,
 .leaderboard td {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
+  padding: 1rem;
+  border: 1px solid #444;
 }
 
 .leaderboard th {
-  background-color: #f0f0f0;
-  font-weight: bold;
+  background-color: #333;
+  color: #00ffcc;
 }
 
 .leaderboard tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #222;
+}
+
+.leaderboard tr:hover {
+  background-color: #444;
 }

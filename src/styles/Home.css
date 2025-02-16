@@ -10,16 +10,16 @@
 }
 
 .hero {
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); /* Neon glow */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
 }
 
 .hero h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #00ffcc; /* Neon cyan */
+  color: #00ffcc;
   text-shadow: 0 0 10px #00ffcc;
 }
 
@@ -35,14 +35,14 @@
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
-  background-color: #00ffcc; /* Neon cyan */
+  background-color: #00ffcc;
   color: #1a1a1a;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .hero button:hover {
-  background-color: #ff00cc; /* Neon pink */
+  background-color: #ff00cc;
 }
 
 .features {
@@ -50,24 +50,51 @@
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .feature {
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  background: rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
   border-radius: 10px;
   width: 250px;
-  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon glow */
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
 }
 
 .feature h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #00ffcc; /* Neon cyan */
+  color: #00ffcc;
   text-shadow: 0 0 5px #00ffcc;
 }
 
 .feature p {
   font-size: 1rem;
   color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 300px;
+  }
 }

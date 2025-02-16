@@ -1,21 +1,21 @@
 /* Header.css */
 .header {
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon glow */
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
 }
 
 .header h1 {
   margin: 0;
-  font-size: 2rem;
-  color: #00ffcc; /* Neon cyan */
-  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Glowing effect */
+  font-size: 1.5rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
 }
 
-.header nav ul {
+.nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -23,14 +23,47 @@
   gap: 1.5rem;
 }
 
-.header nav ul li a {
+.nav ul li a {
   font-size: 1.2rem;
-  color: #00ffcc; /* Neon cyan */
+  color: #00ffcc;
   text-shadow: 0 0 5px #00ffcc;
   transition: color 0.3s ease;
 }
 
-.header nav ul li a:hover {
-  color: #ff00cc; /* Neon pink */
+.nav ul li a:hover {
+  color: #ff00cc;
   text-shadow: 0 0 10px #ff00cc;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #00ffcc;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+  }
+
+  .nav ul.open {
+    display: flex;
+  }
 }

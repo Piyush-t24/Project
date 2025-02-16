@@ -1,28 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import GameLobby from "./components/GameLobby";
-import GameInterface from "./components/GameInterface";
+import Lobby from "./components/Lobby";
+import GameRoom from "./components/GameRoom";
 import Leaderboard from "./components/Leaderboard";
-import Profile from "./components/Profile";
+import Chat from "./components/Chat";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./styles/App.css";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/play" element={<GameLobby />} />
-          <Route path="/game" element={<GameInterface />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Lobby />} />
+        <Route path="/room/:roomCode" element={<GameRoom />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

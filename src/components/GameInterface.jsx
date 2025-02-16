@@ -13,6 +13,7 @@ function GameInterface() {
   const [options, setOptions] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchQuestion = async () => {
@@ -22,9 +23,12 @@ function GameInterface() {
         setQuestion(question);
         setOptions(options);
         setCorrectAnswer(correctAnswer);
+        setError("");
       } catch (err) {
         setError("Failed to fetch question. Please try again.");
         console.error(err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -51,15 +55,22 @@ function GameInterface() {
   return (
     <div className="game-interface">
       <h2>Time Left: {timeLeft}s</h2>
-      <h3>{question}</h3>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <div className="options">
-        {options.map((option, index) => (
-          <button key={index} onClick={() => handleAnswer(option)}>
-            {option}
-          </button>
-        ))}
-      </div>
+      {loading ? (
+        <p>Loading question...</p>
+      ) : error ? (
+        <p style={{ color: "red" }}>{error}</p>
+      ) : (
+        <>
+          <h3>{question}</h3>
+          <div className="options">
+            {options.map((option, index) => (
+              <button key={index} onClick={() => handleAnswer(option)}>
+                {option}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

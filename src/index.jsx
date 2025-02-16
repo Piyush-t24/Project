@@ -1,9 +1,7 @@
 import React from "react";
-import { createRoot } from "react-dom/client"; // Import createRoot
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./styles/App.css";
-
-console.log("React is rendering..."); // Debugging line
 
 const root = createRoot(document.getElementById("root"));
 root.render(

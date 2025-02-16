@@ -1,37 +1,50 @@
-/* GameInterface.css */
-.game-interface {
-  flex: 1;
+/* GameRoom.css */
+.game-room {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  color: #fff;
   text-align: center;
 }
 
-.game-interface h2 {
+.game-room h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #00ffcc;
   text-shadow: 0 0 10px #00ffcc;
 }
 
-.game-interface h3 {
+.game-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.game-content h3 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.game-content h4 {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #fff;
 }
 
 .options {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .options button {
   padding: 1rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   background-color: #00ffcc;
@@ -40,22 +53,10 @@
   transition: background-color 0.3s ease;
 }
 
-.options button:hover {
+.options button.selected {
   background-color: #ff00cc;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .game-interface h2 {
-    font-size: 1.5rem;
-  }
-
-  .game-interface h3 {
-    font-size: 1.2rem;
-  }
-
-  .options button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-  }
+.options button:hover {
+  background-color: #ff00cc;
 }
