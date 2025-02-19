@@ -1,37 +1,53 @@
 /* Home.css */
 .home {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  color: #fff;
   text-align: center;
-}
-
-.hero {
-  background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
 }
 
-.hero h2 {
+.home h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #00ffcc;
   text-shadow: 0 0 10px #00ffcc;
 }
 
-.hero p {
-  font-size: 1.5rem;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 2rem;
-  color: #fff;
 }
 
-.hero button {
-  margin: 0.5rem;
-  padding: 0.75rem 1.5rem;
+.input-group input,
+.input-group select {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  max-width: 300px;
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.actions button {
+  padding: 1rem 2rem;
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
@@ -41,60 +57,6 @@
   transition: background-color 0.3s ease;
 }
 
-.hero button:hover {
+.actions button:hover {
   background-color: #ff00cc;
-}
-
-.features {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.feature {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1.5rem;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-}
-
-.feature h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #00ffcc;
-  text-shadow: 0 0 5px #00ffcc;
-}
-
-.feature p {
-  font-size: 1rem;
-  color: #fff;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .hero button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature {
-    width: 100%;
-    max-width: 300px;
-  }
 }

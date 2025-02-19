@@ -1,36 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 
 function Home() {
+  const [name, setName] = useState("");
+  const [language, setLanguage] = useState("English");
   const navigate = useNavigate();
 
-  const handlePlayNow = () => {
-    navigate("/play"); // Navigate to the Game Lobby
+  const handlePlay = () => {
+    if (name.trim()) {
+      navigate("/play"); // Navigate to the game page
+    } else {
+      alert("Please enter your name!");
+    }
   };
 
-  const handlePracticeMode = () => {
-    navigate("/practice"); // Navigate to the Practice Mode (to be implemented)
+  const handleCreateRoom = () => {
+    if (name.trim()) {
+      const roomCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+      navigate(`/room/${roomCode}`); // Navigate to the private room
+    } else {
+      alert("Please enter your name!");
+    }
   };
 
   return (
     <div className="home">
-      <section className="hero">
-        <h2>Level Up Your NEET Preparation</h2>
-        <p>Compete, Learn, Win!</p>
-        <button onClick={handlePlayNow}>Play Now</button>
-        <button onClick={handlePracticeMode}>Practice Mode</button>
-      </section>
-      <section className="features">
-        <div className="feature">
-          <h3>Real-Time Battles</h3>
-          <p>Compete with players in real-time.</p>
-        </div>
-        <div className="feature">
-          <h3>Leaderboards</h3>
-          <p>Climb the ranks and show your skills.</p>
-        </div>
-      </section>
+      <h1>Play & Learn</h1>
+      <div className="input-group">
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+          <option value="English">English</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Spanish">Spanish</option>
+        </select>
+      </div>
+      <div className="actions">
+        <button onClick={handlePlay}>Play!</button>
+        <button onClick={handleCreateRoom}>Create Private Room</button>
+      </div>
     </div>
   );
 }
